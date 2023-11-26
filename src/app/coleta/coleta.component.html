@@ -1,0 +1,34 @@
+<h2>Coleta</h2>
+<div class="center">
+<div class="container">
+  <div class="localizacao">
+    <h3>Localização</h3>
+    <div class="endereco">
+      <p>Endereço</p>
+      <i class="pi pi-plus" style="font-size: 0.7rem"></i>
+    </div>
+    <form [formGroup]="coletaForm">
+      <input type="text" pInputText formControlName="endereco" />
+    </form>
+  </div>
+  <div class="diaDisponivel">
+    <h3>Dia disponível para coleta</h3>
+    <div class="dias">
+      <img src="../../assets/img/seg.png" alt="botão segunda" (click)="onClickDiaDisponivel('seg')" [class.clicado]="onClickDiaClicado('seg')">
+      <img src="../../assets/img/ter.png" alt="botão terça" (click)="onClickDiaDisponivel('ter')" [class.clicado]="onClickDiaClicado('ter')">
+      <img src="../../assets/img/qua.png" alt="botão quarta" (click)="onClickDiaDisponivel('qua')" [class.clicado]="onClickDiaClicado('qua')">
+      <img src="../../assets/img/qui.png" alt="botão quinta" (click)="onClickDiaDisponivel('qui')" [class.clicado]="onClickDiaClicado('qui')">
+      <img src="../../assets/img/sex.png" alt="botão sexta" (click)="onClickDiaDisponivel('sex')" [class.clicado]="onClickDiaClicado('sex')">
+      <img src="../../assets/img/sab.png" alt="botão sábado" (click)="onClickDiaDisponivel('sab')" [class.clicado]="onClickDiaClicado('sab')">
+    </div>
+  </div>
+  <div class="horarioDisponivel">
+    <h3>Horário disponível para coleta</h3>
+    <!-- <div>
+      <input type="text" pInputText [(ngModel)]="rangeValues" class="w-full"/>
+      <p-slider [(ngModel)]="rangeValues" [range]="true"></p-slider>
+    </div> -->
+  </div>
+</div>
+<div class="botaoColeta" (click)="onClickSolicitarColeta()"><button><img src="../assets/img/Component 3.png" alt="botão solicitar coleta"></button></div>
+</div>
